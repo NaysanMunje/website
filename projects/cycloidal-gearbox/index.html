@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycloidal Gearbox — Naysan Munje</title>
+    <link rel="stylesheet" href="../../src/style.css?v=1789354404" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="logo" href="../../index.html">Naysan Munje</a>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../../projects/index.html">Projects</a>
+          <a href="../../Naysan_Munje_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <h1>Cycloidal Gearbox</h1>
+          <span class="date">2026</span>
+          <div class="beside beside-left"><div class="beside-text"><p>Cycloidal gearboxes are very good for 3D printing. They are compact, low on backlash, and don&#x27;t have any small teeth that can break easily. This is a 20:1 cycloidal gearbox I designed for my robotic arm. It&#x27;s easy to put together, strong, and cheap to build. The CAD and STL files are available on <a href="https://github.com/NaysanMunje/20-to-1-cycloidal-gearbox">GitHub</a>.</p></div><div class="beside-media"><img alt="" src="_docx_media/img01.png" /></div></div>
+          <h2>Specifications</h2>
+          <ul><li>Gear reduction: 20:1</li><li>Drive: NEMA 17 stepper motor</li><li>Maximum torque: approximately 4.5 N·m</li><li>Cost: approximately $40 CAD ($28 USD), excluding the motor and 3D-printed parts</li></ul>
+          <h2>Materials</h2>
+          <div class="beside beside-right"><div class="beside-text"><ul><li>1× NEMA 17 stepper motor</li><li>2× 50 × 65 × 7 mm bearings</li><li>1× 15 × 28 × 5 mm bearing</li><li>2× 12 × 21 × 5 mm bearings</li><li>12× 8 × 5 × 2.5 mm bearings</li><li>6× 3 × 30 mm metal dowel pins</li><li>Silicone grease</li><li>M3 heat-set inserts</li><li>M3 bolts</li><li>3D-printed parts</li></ul></div><div class="beside-media"><img alt="" src="_docx_media/img05.png" /></div></div>
+          <h2>How cycloidal gearboxes work</h2>
+          <p>Cycloidal gearboxes use the eccentric motion of a disc with “bumps” around round lobes to slow rotation. They work especially well for 3D-printed gearboxes because their shape is far less likely to break when using weak plastic. Also, because of their shape, contact between the disc and outer lobes is always maintained, making backlash almost zero.</p>
+          <figure class="media-below"><img alt="" src="_docx_media/img03.gif" /></figure>
+          <p><a href="https://en.wikipedia.org/wiki/File:Cycloidal_drive.gif">Cycloidal drive animation source</a></p>
+          <h2>Design</h2>
+          <div class="beside beside-right"><div class="beside-text"><p>I chose to make the gearbox reduction 20:1, which gives enough torque to be useful in a robotic arm while still allowing it to rotate quickly. I used <a href="https://github.com/woodenCaliper/CycloidalDrive">this Fusion 360 plugin</a> to generate the cycloidal sketches. Since I needed the final gearbox to be fairly compact, one of my main considerations was the camshaft.</p>
+          <p>After a few trials, I ended with an input shaft that progressively gets smaller and uses progressively smaller bearings. This removes the need to screw multiple parts together to build the shaft. There is no bolt fastening the input shaft to the stepper motor, only very tight tolerancing, which is not ideal but has not caused any issues yet.</p>
+          <p>The stepper motor is screwed into an outer plate. Metal dowel pins inserted into the outer plates stay rigidly in place, which allows the outer gear to rotate. There are two identical cycloidal discs placed 180 degrees out of phase to reduce vibration and improve backdrivability. The motor can be controlled with any stepper driver and microcontroller. I&#x27;m using a DM552 driver and an ESP32.</p></div><div class="beside-media"><img alt="" src="_docx_media/img04.png" /></div></div>
+          <figure class="media-below"><img alt="Exploded view showing the gearbox components" src="_docx_media/img06.jpg" /></figure>
+
+          
+        </article>
+      </main>
+
+      <footer>
+        <a href="mailto:naysan.munje@gmail.com">naysan.munje@gmail.com</a>
+        <a href="https://www.linkedin.com/in/naysan-munje-257455286/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:6138907643">613-890-7643</a>
+      </footer>
+    </div>
+  </body>
+</html>

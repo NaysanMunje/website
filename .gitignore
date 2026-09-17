@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+__pycache__/
+*.pyc
+extra media/
+*.docx
+.cursor/
+engineering-portfolio.html
+portfolio-media/
+Naysan_Munje_Engineering_Portfolio.pdf
+portfolio-preview-p1.png
+portfolio-preview-p2.png
+open-site.bat
+content/**/_docx_media/
+content/**/_extracted_docx.txt
+content/projects/cycloidal-gearbox/*.png

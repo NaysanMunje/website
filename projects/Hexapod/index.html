@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HPod Hexapod — Naysan Munje</title>
+    <link rel="stylesheet" href="../../src/style.css?v=1789354404" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="logo" href="../../index.html">Naysan Munje</a>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../../projects/index.html">Projects</a>
+          <a href="../../Naysan_Munje_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <h1>HPod Hexapod</h1>
+          <span class="date">2026</span>
+          <p>Hexapods are really cool, so I made a hexapod. This is HPod, a low-cost, six-legged robot made with 3D-printed parts and servo motors, controlled wirelessly with an ESP32. This was a really fun build, and I&#x27;m very happy with its performance.</p>
+          <p>I wanted to design something anyone could assemble without spending too much, so the robot uses cheap MG996R servo motors and the total cost comes to less than $160 USD. If you&#x27;re interested in making HPod, the full BOM, CAD, and code files are on <a href="https://github.com/NaysanMunje/Hexapod-Robot">GitHub</a>.</p>
+          <div class="media-gallery"><img alt="" src="_docx_media/img01.png" /><img alt="" src="_docx_media/img02.png" /></div>
+          <h2>How it works</h2>
+          <p>The robot uses 18 servo motors, three per leg. Each servo can move to specific angles within 180 degrees of rotation, allowing precise motion for each leg. The ESP32 microcontroller connects to my local Wi-Fi network and allows the robot to be controlled through a browser on any device.</p>
+          <div class="text-columns"><section><h2>Project features</h2><ul><li>3-week build</li><li>Total cost: $150 USD</li><li>ESP32 controlled</li><li>3D-printed frame</li><li>18× MG996R servos</li></ul></section><section><h2>Robot features</h2><ul><li>18-DOF hexapod robot</li><li>3 walking patterns</li><li>7 stationary motion patterns</li><li>Wireless control over Wi-Fi</li></ul></section></div>
+          <h2>Electronics</h2>
+          <ul><li>ESP32-S3</li><li>2× PCA9685 servo motor drivers</li><li>Voltage converter</li><li>7.4 V LiPo battery</li></ul>
+          <div class="grid-with-image"><div class="media-gallery media-gallery-compact"><img alt="" src="_docx_media/img03.png" /><img alt="" src="_docx_media/img04.png" /><img alt="" src="_docx_media/img05.png" /><img alt="" src="_docx_media/img06.png" /></div><img class="grid-side-image" alt="" src="_docx_media/img07.png" /></div>
+          <h2>Build process</h2>
+          <h3>Leg design</h3>
+          <p>The robot is made up of six identical legs housed on a central chassis. Each leg consists of three servo motors, which control what I call the “hip,” “thigh,” and “shin” of the leg. I went through six versions of the leg design before ending up with the final result.</p>
+          <p>The thigh is one long bar that holds both the thigh and shin servos. A plate is screwed into the bottom of the thigh mount to hide the wires and help attach the other leg parts. The shin needed to be longer than the thigh to improve walking functionality, but making it too long would reduce stability when using these cheap servos. I ended up making the shins 140 mm long. To attach the shin to the thigh and the thigh to the hip, a small bearing is inserted into the limb and a long bolt holds it in place. To drive the limbs, a servo disc is screwed onto the opposite side.</p>
+          <figure class="media-below"><img alt="Labeled CAD model of one leg" src="_docx_media/img08.jpg" /></figure>
+          <h3>Chassis and wiring</h3>
+          <p>To compensate for the shape of the battery, the chassis is slightly oblong, with the legs not pointing directly out of the corners. Each hip is bolted to the chassis, with an additional round brace connected to each leg for reinforcement. The wires run through the hip joint, under and through the chassis, and plug into two PCA9685 servo drivers. There was limited space in the chassis base, so the rest of the electronics are mounted on top.</p>
+          <figure class="media-below"><img alt="Assembled chassis and legs" src="_docx_media/img10.png" /></figure>
+          <div class="media-gallery media-gallery-contained"><img alt="" src="_docx_media/img09.png" /><img alt="" src="_docx_media/img11.png" /></div>
+          <h2>Control</h2>
+          <div class="beside beside-right"><div class="beside-text"><p>The CAD model gives the angle between components at their maximum positions, which is used to calibrate the robot and constrain a URDF model. To calibrate, each motor is moved to its maximum position, and the current servo angle is remembered. Since each servo starts at a different angle, after all motors are calibrated, the motor with the least rotation available is used to constrain the rest.</p>
+          <p>Now that the robot is built and the ESP32 knows the angle of every joint, it can walk. Inverse kinematics equations calculate the movement of the legs. A few variables are available to change the robot&#x27;s motion, including chassis height, speed, and leg radius.</p></div><div class="beside-media"><img alt="" src="_docx_media/img12.png" /></div></div>
+          <h2>Final results</h2>
+          <p>The robot has three walking-pattern options. “Tripod” is the default and performs the best, working by moving three legs at a time. “Ripple” and “Wave” patterns are also available, along with several stationary “stretching” patterns.</p>
+          <iframe src="https://www.youtube.com/embed/vkG6U445nmI" title="HPod hexapod final results" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/9bgHFQvrdGM" title="HPod hexapod" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h2>Things I&#x27;d change</h2>
+          <p>I didn&#x27;t realize the servo driver boards don&#x27;t power the ESP32 and that it needed to be powered externally. I&#x27;d definitely like to fix that and add a power switch instead of plugging the power and ground of the battery directly into the voltage converter.</p>
+          <p>The main limiting factor in the quality of the robot&#x27;s motion is the cheap servos I used. If I had a little more money to spend on motors, it would improve the robot instantly.</p>
+          <p>There is an MPU on the robot, but because of some wiring issues I wasn&#x27;t able to use it. I&#x27;d love to get that working properly to actively improve stability and walking on uneven surfaces.</p>
+          <p><a href="https://github.com/NaysanMunje/Hexapod-Robot">GitHub</a></p>
+          
+        </article>
+      </main>
+
+      <footer>
+        <a href="mailto:naysan.munje@gmail.com">naysan.munje@gmail.com</a>
+        <a href="https://www.linkedin.com/in/naysan-munje-257455286/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:6138907643">613-890-7643</a>
+      </footer>
+    </div>
+  </body>
+</html>
