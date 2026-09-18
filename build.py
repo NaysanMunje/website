@@ -21,7 +21,7 @@ def load_site() -> dict:
         "github": page.get("github", ""),
         "linkedin": page.get("linkedin", ""),
         "phone": page.get("phone", ""),
-        "resume": page.get("resume", "Naysan_Munje_Resume.pdf"),
+        "resume": page.get("resume", "Naysan_Munje_Resume.pdf?v=2"),
         "bio": page["body"],
     }
 
