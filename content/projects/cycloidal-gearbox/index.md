@@ -53,3 +53,5 @@ The stepper motor is screwed into an outer plate. Metal dowel pins inserted into
 :::
 
 ![Exploded view showing the gearbox components](_docx_media/img06.jpg)
+
+https://www.youtube.com/watch?v=sDTbDqA5WTg
