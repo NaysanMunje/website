@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OREO Robotic Arm — Naysan Munje</title>
-    <link rel="stylesheet" href="../../src/style.css?v=1789354404" />
+    <link rel="stylesheet" href="../../src/style.css?v=1791310512" />
   </head>
   <body>
     <div class="page">
@@ -32,7 +32,7 @@
           <p>The base uses eccentric cycloidal gears, which are developed by extruding and twisting a cycloidal disc and lobe. This essentially creates two normal gears, with the input shaft having one tooth and the output gear having the same number of teeth as the cycloidal disc. For my robot, I used a 25:1 gear ratio, so the cycloidal disc has 25 bumps.</p>
           <p>I chose eccentric cycloidal gears instead of the standard cycloidal gears used in the rest of the robot because the base needed to be very large, and this solution required less 3D printing and hardware. Since the base is so large, buying bearings would have been very expensive. Instead, I used <a href="https://cad.onshape.com/documents/bab27899d3f760d83f0aeec4/w/1b1752c6295bf89c5b182d23/e/62e4dca1fa2dfc144c244eaa">this parametric model</a>, made by the YouTube channel <a href="https://www.youtube.com/@Positive_Altitude">Positive Altitude</a>, to 3D print custom bearings using ball bearings and silicone grease. They aren&#x27;t as strong as metal bearings, but they move quite smoothly and come together very easily.</p>
           <div class="media-gallery"><img alt="" src="_docx_media/img03.png" /><img alt="" src="_docx_media/img04.jpg" /></div>
-          <iframe src="https://www.youtube.com/embed/mjgDUBLB1Pw" title="OREO robotic arm base" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/mjgDUBLB1Pw" title="Project video" allowfullscreen></iframe>
           <h2>Shoulder and elbow</h2>
           <p>The shoulder and elbow use nearly identical 20:1 cycloidal gearboxes. More details are available on the <a href="../cycloidal-gearbox/index.html">Cycloidal Gearbox project page</a>. I decided to make the gearbox housing rotate instead of driving an output shaft to make the arm more compact and symmetrical. The two joints are connected by a small aluminum T-slot extrusion bolted to the shoulder gearbox output.</p>
           <div class="media-gallery"><img alt="" src="_docx_media/img05.png" /><img alt="" src="_docx_media/img06.png" /></div>
@@ -46,7 +46,7 @@
           <p>To calibrate the arm, each motor is driven until a limit switch is hit, which is understood as the maximum position. The CAD model gives the maximum angle to limit rotation in the other direction. After calibration, each joint moves to its center position.</p>
           <p>Using the joint angles and component lengths, inverse kinematics calculations can move the tip of the arm to specific locations in 3D space. I found clicking any point in space around the model difficult to control, so I added dots at different heights and distances around the arm that are easier to click.</p>
           <figure class="media-below"><img alt="OREO&#x27;s URDF control interface and inverse-kinematics targets" src="_docx_media/img09.png" /></figure>
-          <iframe src="https://www.youtube.com/embed/RG46b9AI338" title="OREO robotic arm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/RG46b9AI338" title="Project video" allowfullscreen></iframe>
           <h2>Things to improve</h2>
           <p>I was mostly focused on the design of the arm, so I think there are improvements to be made on the software side. I&#x27;d like to add a proper gripper and vision system and start training the robot to pick and place objects. I&#x27;d also like to improve the electronics, specifically the wiring, which is currently quite messy. Finally, I&#x27;d like to use actual encoders instead of approximating rotation with limit switches. Stay tuned for version 2?</p>
           <p><a href="https://github.com/NaysanMunje/OREO---robotic-arm">GitHub</a></p>
@@ -55,9 +55,7 @@
       </main>
 
       <footer>
-        <a href="mailto:naysan.munje@gmail.com">naysan.munje@gmail.com</a>
-        <a href="https://www.linkedin.com/in/naysan-munje-257455286/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="tel:6138907643">613-890-7643</a>
+        <a href="mailto:naysan.munje@gmail.com">naysan.munje@gmail.com</a> <a href="https://www.linkedin.com/in/naysan-munje-257455286/" target="_blank" rel="noopener">LinkedIn</a>
       </footer>
     </div>
   </body>

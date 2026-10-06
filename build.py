@@ -20,7 +20,6 @@ def load_site() -> dict:
         "email": page.get("email", ""),
         "github": page.get("github", ""),
         "linkedin": page.get("linkedin", ""),
-        "phone": page.get("phone", ""),
         "resume": page.get("resume", "Naysan_Munje_Resume.pdf?v=3"),
         "bio": page["body"],
     }
@@ -241,11 +240,6 @@ def chrome(site: dict, depth: int) -> tuple[str, str, str]:
         footer_bits.append(
             f'<a href="{escape(site["linkedin"])}" target="_blank" rel="noopener">LinkedIn</a>'
         )
-    if site.get("phone"):
-        phone = site["phone"]
-        footer_bits.append(
-            f'<a href="tel:{escape(phone.replace("-", ""))}">{escape(phone)}</a>'
-        )
     footer = f"""      <footer>
         {" ".join(footer_bits)}
       </footer>"""
@@ -359,7 +353,6 @@ def build() -> None:
         <ul class="contact-list">
           <li><a href="{escape(site["github"])}">GitHub</a></li>
           <li><a href="{escape(site["linkedin"])}" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="tel:{escape(site["phone"].replace("-", ""))}">{escape(site["phone"])}</a></li>
           <li><a href="{escape(site["resume"])}" target="_blank" rel="noopener">Resume</a></li>
         </ul>"""
     write(ROOT / "index.html", wrap(site["name"], css, header, home_main, footer))
