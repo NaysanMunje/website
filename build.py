@@ -341,8 +341,11 @@ def build() -> None:
         f"        {line}" if line else ""
         for line in render_md(site["bio"]).splitlines()
     )
+    featured_slugs = ("qdd-actuator", "hexapod")
+    by_slug = {p["slug"]: p for p in projects}
+    featured = [by_slug[slug] for slug in featured_slugs if slug in by_slug]
     cards = "\n".join(
-        project_card(p, f"projects/{p['slug']}/index.html") for p in projects
+        project_card(p, f"projects/{p['slug']}/index.html") for p in featured
     )
     home_main = f"""        <h1>{escape(site["name"])}</h1>
         <p class="role">{escape(site["role"])}</p>
@@ -351,6 +354,7 @@ def build() -> None:
         <ul class="project-grid">
 {cards}
         </ul>
+        <a class="see-all" href="projects/index.html">See all projects</a>
         <ul class="contact-list">
           <li><a href="{escape(site["github"])}">GitHub</a></li>
           <li><a href="{escape(site["linkedin"])}" target="_blank" rel="noopener">LinkedIn</a></li>

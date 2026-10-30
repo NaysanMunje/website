@@ -175,6 +175,21 @@ p {
   font-size: 0.85em;
 }
 
+.see-all {
+  display: block;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #8b5e3c;
+  background: #efe0cc;
+  text-align: center;
+  text-decoration: none;
+}
+
+.see-all:hover,
+.see-all:focus-visible {
+  background: #e6d3bb;
+}
+
 @media (max-width: 800px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
