@@ -40,7 +40,7 @@ I made a [simulation](https://github.com/NaysanMunje/cycloidal-planetary-gear-ge
 
 ## Winding the stator
 
-I had to manually wind the stator using 0.4 mm copper wire, a process that was extremely tedious and I highly recommend against. To wind the stator, I split the 36 teeth into 6 groups of 2, three times for the A, B, and C phases of the motor. The ends of the three wires are soldered together to get a wye connection, which I definitely remember from my electronics classes. It gives more torque than a delta connection. I was able to get 24 turns per tooth.
+I had to manually wind the stator using 0.4 mm copper wire, a process that was extremely tedious and I highly recommend against. To wind the stator, I split the 36 teeth into 6 groups of 2, three times for the A, B, and C phases of the motor. The ends of the three wires are soldered together to get a wye connection, which I definitely remember from my electronics classes :). It gives more torque than a delta connection. I was able to get 24 turns per tooth.
 
 :::gallery-equal _docx_media/image3.png _docx_media/image10.png
 :::
