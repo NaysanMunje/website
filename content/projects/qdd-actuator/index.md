@@ -33,7 +33,7 @@ There are two components to a QDD actuator, the BLDC motor and the gear reductio
 
 I initially wanted to use cycloidal gears like I previously did for my [robotic arm](../cycloidal-gearbox/index.html), but the stator I bought was too small to make that work. I decided to create a planetary gearbox because I had never made one before. I was worried that standard spur gears wouldn't hold up well for a 3D printed design, so I used eccentric cycloidal gears, which I also used in my robotic arm. They provide less backlash and more contact.
 
-I made a simulation to design the gears and exported it as a sketch to Fusion 360. The stator's size still caused some problems, so I could only get a maximum of a 6:1 reduction using a 4 lobed sun gear.
+I made a [simulation](https://github.com/NaysanMunje/cycloidal-planetary-gear-generator) to design the gears and exported it as a sketch to Fusion 360. The stator's size still caused some problems, so I could only get a maximum of a 6:1 reduction using a 4 lobed sun gear.
 
 :::gallery _docx_media/image1.png _docx_media/image11.png
 :::

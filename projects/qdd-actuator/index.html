@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QDD Actuator — Naysan Munje</title>
-    <link rel="stylesheet" href="../../src/style.css?v=1793325862" />
+    <link rel="stylesheet" href="../../src/style.css?v=1793331440" />
   </head>
   <body>
     <div class="page">
@@ -31,7 +31,7 @@
           <p><a href="https://www.cubemars.com/qdd-motors-for-humanoid-and-quadruped-robots.html">QDD motors for humanoid and quadruped robots</a></p>
           <h2>Choosing the gear reduction</h2>
           <p>I initially wanted to use cycloidal gears like I previously did for my <a href="../cycloidal-gearbox/index.html">robotic arm</a>, but the stator I bought was too small to make that work. I decided to create a planetary gearbox because I had never made one before. I was worried that standard spur gears wouldn&#x27;t hold up well for a 3D printed design, so I used eccentric cycloidal gears, which I also used in my robotic arm. They provide less backlash and more contact.</p>
-          <p>I made a simulation to design the gears and exported it as a sketch to Fusion 360. The stator&#x27;s size still caused some problems, so I could only get a maximum of a 6:1 reduction using a 4 lobed sun gear.</p>
+          <p>I made a <a href="https://github.com/NaysanMunje/cycloidal-planetary-gear-generator">simulation</a> to design the gears and exported it as a sketch to Fusion 360. The stator&#x27;s size still caused some problems, so I could only get a maximum of a 6:1 reduction using a 4 lobed sun gear.</p>
           <div class="media-gallery"><img alt="" src="_docx_media/image1.png" /><img alt="" src="_docx_media/image11.png" /></div>
           <h2>Winding the stator</h2>
           <p>I had to manually wind the stator using 0.4 mm copper wire, a process that was extremely tedious and I highly recommend against. To wind the stator, I split the 36 teeth into 6 groups of 2, three times for the A, B, and C phases of the motor. The ends of the three wires are soldered together to get a wye connection, which I definitely remember from my electronics classes. It gives more torque than a delta connection. I was able to get 24 turns per tooth.</p>
