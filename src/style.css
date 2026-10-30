@@ -302,6 +302,18 @@ article img {
   object-fit: contain;
 }
 
+.media-gallery-grid3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 680px;
+  gap: 0.55rem;
+}
+
+.media-gallery-grid3 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .media-gallery-small-second img:last-child {
   width: 70%;
   justify-self: center;
@@ -413,6 +425,10 @@ iframe {
 
   .media-gallery-compact {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .media-gallery-grid3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .grid-with-image {

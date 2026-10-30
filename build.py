@@ -131,6 +131,7 @@ def render_blocks(body: str) -> str:
                 ":::gallery-equal": " media-gallery-equal",
                 ":::gallery-compact": " media-gallery-compact",
                 ":::gallery-contained": " media-gallery-contained",
+                ":::gallery-grid3": " media-gallery-grid3",
             }
             modifier = modifiers.get(directive, "")
             images = "".join(
