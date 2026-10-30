@@ -56,6 +56,8 @@ After winding the stator and gluing magnets to the rotor, the assembly came toge
 
 The power supply I have isn't good enough to properly test torque and rpm, so I'll update this page with those results when I can test the actuator at school. For now, I have done preliminary tests on speed, precision, and general function, all of which I am very happy with.
 
+https://www.youtube.com/watch?v=KFMwBq777qw
+
 ## Final thoughts
 
 I had a really good time making this. That being said, I am not sure a DIY actuator like this will be a viable solution for my future projects. Considering the cost and the effort it took to make this actuator, I think I may be better off buying machined motors and saving the peace of mind of avoiding winding and magnet gluing errors. Unless I find pre coiled stators and magnet rings for much cheaper, I will likely not be using this actuator design for a major project.
