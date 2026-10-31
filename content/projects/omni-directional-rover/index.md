@@ -1,7 +1,7 @@
 ---
 title: Omni Directional Rover
-subtitle: Three-wheeled holonomic rover
-preview: A three-wheeled rover with omnidirectional wheels, encoder motors, and Wi-Fi control on an ESP32.
+subtitle: Three wheeled holonomic rover
+preview: A three wheeled rover with omnidirectional wheels, encoder motors, and WiFi control on an ESP32.
 date: 2026
 github:
 thumbnail: _docx_media/cover.jpg

@@ -1,6 +1,6 @@
 ---
 title: HPod Hexapod
-subtitle: Low-cost, 18-DOF walking robot
+subtitle: Low cost, 18 DOF walking robot
 preview: HPod is a low cost, six legged robot made with 3D printed parts and 18 servo motors, controlled wirelessly with an ESP32.
 date: 2026
 github: https://github.com/NaysanMunje/Hexapod-Robot

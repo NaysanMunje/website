@@ -1,6 +1,6 @@
 ---
 title: OREO Robotic Arm
-subtitle: 4-DOF, stepper-driven robotic arm
+subtitle: 4 DOF, stepper driven robotic arm
 preview: OREO is a 4 degree of freedom robotic arm built from repurposed 3D printer parts, custom cycloidal gearboxes, and 3D printed components.
 date: 2026
 github: https://github.com/NaysanMunje/OREO---robotic-arm
