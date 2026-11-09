@@ -55,9 +55,23 @@ def parse_page(path: Path) -> dict:
     return meta
 
 
+def img_tag(src: str, alt: str = "", class_name: str = "") -> str:
+    class_attr = f' class="{class_name}"' if class_name else ""
+    return (
+        f'<img{class_attr} alt="{escape(alt)}" src="{escape(src)}" '
+        f'loading="lazy" decoding="async" />'
+    )
+
+
 def inline_md(text: str) -> str:
-    text = escape(text)
-    text = re.sub(r"!\[(.*?)\]\((.*?)\)", r'<img alt="\1" src="\2" />', text)
+    parts: list[str] = []
+    pos = 0
+    for match in re.finditer(r"!\[(.*?)\]\((.*?)\)", text):
+        parts.append(escape(text[pos : match.start()]))
+        parts.append(img_tag(match.group(2), match.group(1)))
+        pos = match.end()
+    parts.append(escape(text[pos:]))
+    text = "".join(parts)
     text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
     return text
@@ -113,14 +127,11 @@ def render_blocks(body: str) -> str:
             continue
         if block.startswith(":::grid-with-image ") and block.endswith(":::"):
             sources = block.splitlines()[0].removeprefix(":::grid-with-image ").split()
-            grid_images = "".join(
-                f'<img alt="" src="{escape(source)}" />' for source in sources[:-1]
-            )
-            side_image = escape(sources[-1])
+            grid_images = "".join(img_tag(source) for source in sources[:-1])
             chunks.append(
                 f'<div class="grid-with-image">'
                 f'<div class="media-gallery media-gallery-compact">{grid_images}</div>'
-                f'<img class="grid-side-image" alt="" src="{side_image}" />'
+                f"{img_tag(sources[-1], class_name='grid-side-image')}"
                 f"</div>"
             )
             continue
@@ -134,9 +145,7 @@ def render_blocks(body: str) -> str:
                 ":::gallery-grid3": " media-gallery-grid3",
             }
             modifier = modifiers.get(directive, "")
-            images = "".join(
-                f'<img alt="" src="{escape(source)}" />' for source in sources
-            )
+            images = "".join(img_tag(source) for source in sources)
             chunks.append(f'<div class="media-gallery{modifier}">{images}</div>')
             continue
         if is_video_url(block):
@@ -146,9 +155,7 @@ def render_blocks(body: str) -> str:
         if image:
             alt, src = image.group(1), image.group(2)
             chunks.append(
-                f'<figure class="media-below">'
-                f'<img alt="{escape(alt)}" src="{escape(src)}" />'
-                f"</figure>"
+                f'<figure class="media-below">{img_tag(src, alt)}</figure>'
             )
             continue
         if block.startswith("### "):
@@ -183,9 +190,7 @@ def render_md(body: str) -> str:
         side = match.group(1) or "right"
         sources = match.group(2).split()
         text = render_blocks(match.group(3))
-        images = "".join(
-            f'<img alt="" src="{escape(source)}" />' for source in sources
-        )
+        images = "".join(img_tag(source) for source in sources)
         chunks.append(
             f'<div class="beside beside-{side}">'
             f'<div class="beside-text">{text}</div>'
@@ -282,7 +287,7 @@ def project_card(project: dict, href: str) -> str:
         thumbnail_src = escape(f"{project_path}/{project['thumbnail']}")
         thumbnail = (
             f'<span class="project-thumb">'
-            f'<img src="{thumbnail_src}" alt="" />'
+            f'<img src="{thumbnail_src}" alt="" loading="lazy" decoding="async" />'
             f"</span>"
         )
     return f"""          <li>

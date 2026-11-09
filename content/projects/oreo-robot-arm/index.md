@@ -53,7 +53,7 @@ The shoulder and elbow use nearly identical 20:1 cycloidal gearboxes. More detai
 
 The wrist is driven by a smaller NEMA 14 stepper motor, which is directly attached to the output of the elbow joint. To save on shipping time and money, I decided to use 3D-printed bearings, similar to the robot's base. In an effort to keep the wrist small and compact, I chose a smaller 11:1 gear reduction. Unlike the shoulder and elbow, the wrist drives an output shaft, which calls for slightly different internal components.
 
-:::gallery-small-second _docx_media/img07.png _docx_media/img08.png
+:::gallery-small-second _docx_media/img07.png _docx_media/img08.jpg
 :::
 
 ## Electronics
@@ -74,7 +74,7 @@ To calibrate the arm, each motor is driven until a limit switch is hit, which is
 
 Using the joint angles and component lengths, inverse kinematics calculations can move the tip of the arm to specific locations in 3D space. I found clicking any point in space around the model difficult to control, so I added dots at different heights and distances around the arm that are easier to click.
 
-![OREO's URDF control interface and inverse-kinematics targets](_docx_media/img09.png)
+![OREO's URDF control interface and inverse-kinematics targets](_docx_media/img09.jpg)
 
 https://www.youtube.com/watch?v=RG46b9AI338
 

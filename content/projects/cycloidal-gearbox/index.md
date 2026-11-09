@@ -4,7 +4,7 @@ subtitle: 20:1 actuator for a robotic arm
 preview: A compact, low backlash, 3D printed 20:1 gearbox designed for my robotic arm.
 date: 2026
 github:
-thumbnail: _docx_media/img04.png
+thumbnail: _docx_media/img04.jpg
 order: 1
 ---
 
@@ -44,7 +44,7 @@ Cycloidal gearboxes use the eccentric motion of a disc with “bumps” around r
 
 ## Design
 
-:::beside _docx_media/img04.png
+:::beside _docx_media/img04.jpg
 I chose to make the gearbox reduction 20:1, which gives enough torque to be useful in a robotic arm while still allowing it to rotate quickly. I used [this Fusion 360 plugin](https://github.com/woodenCaliper/CycloidalDrive) to generate the cycloidal sketches. Since I needed the final gearbox to be fairly compact, one of my main considerations was the camshaft.
 
 After a few trials, I ended with an input shaft that progressively gets smaller and uses progressively smaller bearings. This removes the need to screw multiple parts together to build the shaft. There is no bolt fastening the input shaft to the stepper motor, only very tight tolerancing, which is not ideal but has not caused any issues yet.

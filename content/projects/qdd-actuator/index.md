@@ -4,13 +4,13 @@ subtitle: 3D printed quasi direct drive actuator
 preview: A nearly fully 3D printed quasi direct drive actuator with a hand wound BLDC motor and a 6:1 eccentric cycloidal planetary reduction.
 date: 2026
 github: https://github.com/NaysanMunje/3D-printed-QDD-actuator
-thumbnail: _docx_media/image12.png
+thumbnail: _docx_media/image12.jpg
 order: 0
 ---
 
 This is a quasi direct drive actuator I designed. I've designed gearboxes before, but this time I took it a step further and made the motor as well. Quasi direct drive actuators combine a BLDC motor and a gear reduction into one component, making them very compact and useful for robots (like MIT's Mini Cheetah). My design is nearly fully 3D printed and uses a 6:1 eccentric cycloidal planetary gear reduction. The CAD and bill of materials are on [GitHub](https://github.com/NaysanMunje/3D-printed-QDD-actuator).
 
-![Finished QDD actuator](_docx_media/image12.png)
+![Finished QDD actuator](_docx_media/image12.jpg)
 
 ## Results
 
@@ -25,7 +25,7 @@ This is a quasi direct drive actuator I designed. I've designed gearboxes before
 
 There are two components to a QDD actuator like this, the BLDC motor and the gear reduction. A BLDC motor uses coils of copper wire to induce magnetic fields that spin a rotor with permanent magnets. Inside the coils, a gearbox reduces the rotation of the rotor and gives more torque.
 
-![Exploded view of a QDD motor](_docx_media/image2.png)
+![Exploded view of a QDD motor](_docx_media/image2.jpg)
 
 [QDD motors for humanoid and quadruped robots](https://www.cubemars.com/qdd-motors-for-humanoid-and-quadruped-robots.html)
 
@@ -35,14 +35,14 @@ I initially wanted to use cycloidal gears like I previously did for my [robotic 
 
 I made a [simulation](https://github.com/NaysanMunje/cycloidal-planetary-gear-generator) to design the gears and exported it as a sketch to Fusion 360. The stator's size still caused some problems, so I could only get a maximum of a 6:1 reduction using a 4 lobed sun gear.
 
-:::gallery _docx_media/image1.png _docx_media/image11.png
+:::gallery _docx_media/image1.jpg _docx_media/image11.jpg
 :::
 
 ## Winding the stator
 
 I had to manually wind the stator using 0.4 mm copper wire, a process that was extremely tedious and I highly recommend against. To wind the stator, I split the 36 teeth into 6 groups of 2, three times for the A, B, and C phases of the motor. The ends of the three wires are soldered together to get a wye connection, which I definitely remember from my electronics classes :). It gives more torque than a delta connection. I was able to get 24 turns per tooth.
 
-:::gallery-equal _docx_media/image3.png _docx_media/image10.png
+:::gallery-equal _docx_media/image3.jpg _docx_media/image10.jpg
 :::
 
 [3D printed QDD robotic actuator (Instructables)](https://www.instructables.com/3D-Printed-QDD-Robotic-Actuator-MIT-Mini-Cheetah-C/)
@@ -51,7 +51,7 @@ I had to manually wind the stator using 0.4 mm copper wire, a process that was e
 
 After winding the stator and gluing magnets to the rotor, the assembly came together easily. The final actuator is about 460 grams and 40 mm wide, with a diameter of around 106 mm. I used an MKS ODrive motor controller with an onboard encoder to get precise angle control.
 
-:::gallery-grid3 _docx_media/image13.png _docx_media/image8.png _docx_media/image11b.png _docx_media/image5.png _docx_media/image9.png _docx_media/image14.png _docx_media/image4.png _docx_media/image15.png _docx_media/image7.png
+:::gallery-grid3 _docx_media/image13.jpg _docx_media/image8.jpg _docx_media/image11b.jpg _docx_media/image5.jpg _docx_media/image9.jpg _docx_media/image14.jpg _docx_media/image4.jpg _docx_media/image15.jpg _docx_media/image7.jpg
 :::
 
 The power supply I have isn't good enough to properly test torque and rpm, so I'll update this page with those results when I can test the actuator at school. For now, I have done preliminary tests on speed, precision, and general function, all of which I am very happy with.

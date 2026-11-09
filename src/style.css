@@ -386,7 +386,7 @@ article img {
   margin-top: 0;
 }
 
-.beside-media img[src$="img04.png"] {
+.beside-media img[src$="img04.jpg"] {
   aspect-ratio: 1.12 / 1;
   object-fit: cover;
   object-position: center;

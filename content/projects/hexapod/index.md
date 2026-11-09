@@ -4,7 +4,7 @@ subtitle: Low cost, 18 DOF walking robot
 preview: HPod is a low cost, six legged robot made with 3D printed parts and 18 servo motors, controlled wirelessly with an ESP32.
 date: 2026
 github: https://github.com/NaysanMunje/Hexapod-Robot
-thumbnail: _docx_media/img01.png
+thumbnail: _docx_media/img01.jpg
 order: 3
 ---
 
@@ -12,7 +12,7 @@ Hexapods are really cool, so I made a hexapod. This is HPod, a low-cost, six-leg
 
 I wanted to design something anyone could assemble without spending too much, so the robot uses cheap MG996R servo motors and the total cost comes to less than $160 USD. If you're interested in making HPod, the full BOM, CAD, and code files are on [GitHub](https://github.com/NaysanMunje/Hexapod-Robot).
 
-:::gallery _docx_media/img01.png _docx_media/img02.png
+:::gallery _docx_media/img01.jpg _docx_media/img02.png
 :::
 
 ## How it works
@@ -41,7 +41,7 @@ Robot features
 - Voltage converter
 - 7.4 V LiPo battery
 
-:::grid-with-image _docx_media/img03.png _docx_media/img04.png _docx_media/img05.png _docx_media/img06.png _docx_media/img07.png
+:::grid-with-image _docx_media/img03.jpg _docx_media/img04.jpg _docx_media/img05.jpg _docx_media/img06.jpg _docx_media/img07.png
 :::
 
 ## Build process
@@ -58,14 +58,14 @@ The thigh is one long bar that holds both the thigh and shin servos. A plate is 
 
 To compensate for the shape of the battery, the chassis is slightly oblong, with the legs not pointing directly out of the corners. Each hip is bolted to the chassis, with an additional round brace connected to each leg for reinforcement. The wires run through the hip joint, under and through the chassis, and plug into two PCA9685 servo drivers. There was limited space in the chassis base, so the rest of the electronics are mounted on top.
 
-![Assembled chassis and legs](_docx_media/img10.png)
+![Assembled chassis and legs](_docx_media/img10.jpg)
 
-:::gallery-contained _docx_media/img09.png _docx_media/img11.png
+:::gallery-contained _docx_media/img09.jpg _docx_media/img11.jpg
 :::
 
 ## Control
 
-:::beside _docx_media/img12.png
+:::beside _docx_media/img12.jpg
 The CAD model gives the angle between components at their maximum positions, which is used to calibrate the robot and constrain a URDF model. To calibrate, each motor is moved to its maximum position, and the current servo angle is remembered. Since each servo starts at a different angle, after all motors are calibrated, the motor with the least rotation available is used to constrain the rest.
 
 Now that the robot is built and the ESP32 knows the angle of every joint, it can walk. Inverse kinematics equations calculate the movement of the legs. A few variables are available to change the robot's motion, including chassis height, speed, and leg radius.
