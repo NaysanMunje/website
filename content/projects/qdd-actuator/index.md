@@ -1,5 +1,5 @@
 ---
-title: QDD Actuator
+title: QDD Internal Actuator
 subtitle: 3D printed quasi direct drive actuator
 preview: A nearly fully 3D printed quasi direct drive actuator with a hand wound BLDC motor and a 6:1 eccentric cycloidal planetary reduction.
 date: 2026
@@ -21,9 +21,9 @@ This is a quasi direct drive actuator I designed. I've designed gearboxes before
 - Cost: $216 CAD
 - Torque: TBD
 
-## How QDD actuators work
+## How Internal QDD actuators work
 
-There are two components to a QDD actuator, the BLDC motor and the gear reduction. A BLDC motor uses coils of copper wire to induce magnetic fields that spin a rotor with permanent magnets. Inside the coils, a gearbox reduces the rotation of the rotor and gives more torque.
+There are two components to a QDD actuator like this, the BLDC motor and the gear reduction. A BLDC motor uses coils of copper wire to induce magnetic fields that spin a rotor with permanent magnets. Inside the coils, a gearbox reduces the rotation of the rotor and gives more torque.
 
 ![Exploded view of a QDD motor](_docx_media/image2.png)
 
