@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QDD Actuator Build Guide — Naysan Munje</title>
+    <link rel="stylesheet" href="../../src/style.css?v=1794187000" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="logo" href="../../index.html">Naysan Munje</a>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../../projects/index.html">Projects</a>
+          <a href="../../Naysan_Munje_Resume.pdf?v=3" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <h1>QDD Actuator Build Guide</h1>
+          <p>Here's the build guide for my internal QDD actuator.</p>
+
+          <h2>Materials</h2>
+          <table class="materials">
+            <thead>
+              <tr><th>Item</th><th>Quantity</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>45x55x6 bearing</td><td>3</td></tr>
+              <tr><td>15x21x5 bearing</td><td>1</td></tr>
+              <tr><td>6x12x4 bearing</td><td>7</td></tr>
+              <tr><td>12x5x3 magnets</td><td>42</td></tr>
+              <tr><td>3x30 metal dowel</td><td>3</td></tr>
+              <tr><td>M3 25mm bolt</td><td>3</td></tr>
+              <tr><td>8110 stator</td><td>1</td></tr>
+              <tr><td>26 gauge copper wire</td><td>1</td></tr>
+              <tr><td>M3 heated inserts</td><td>34</td></tr>
+              <tr><td>MKS ODrive mini + wire + magnet</td><td>1</td></tr>
+              <tr><td>Silicon grease</td><td></td></tr>
+              <tr><td>General M3 bolts</td><td></td></tr>
+            </tbody>
+          </table>
+
+          <p>Wind the stator with 26 gauge wire according to the diagram. I was able to get 24 turns per tooth. More turns would be better if you can. You can also get multiple spools of wire and use multiple wires at once. I don't have a picture for it but the ends should be connected and covered with heat shrink, and the start of each wire should also be connected to a protected wire and covered with heat shrink. I used the wires that came with the motor driver, but anything that plugs into the motor driver is fine.</p>
+          <div class="media-gallery">
+            <img alt="Stator winding diagram" src="build-guide/step-01.jpg" loading="lazy" decoding="async" />
+            <img alt="Wound stator" src="build-guide/step-02.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Press in the 15x21x5 bearing into the inner output and insert 3 dowel pins.</p>
+          <div class="media-gallery media-gallery-grid3">
+            <img alt="Inner output with bearing" src="build-guide/step-03.jpg" loading="lazy" decoding="async" />
+            <img alt="Dowel pins in the inner output" src="build-guide/step-04.jpg" loading="lazy" decoding="async" />
+            <img alt="Inner output assembly" src="build-guide/step-05.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Get the main housing ready and insert the stator.</p>
+          <p>*NOTE: after press fighting the bearing into the housing, the stator will not fit. The stator must be put in first.</p>
+          <div class="media-gallery">
+            <img alt="Main housing" src="build-guide/step-06.jpg" loading="lazy" decoding="async" />
+            <img alt="Stator inserted in the housing" src="build-guide/step-07.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Press fit a 45x55x7 bearing into the inside and push in the inner output.</p>
+          <div class="media-gallery">
+            <img alt="Bearing pressed into the housing" src="build-guide/step-08.jpg" loading="lazy" decoding="async" />
+            <img alt="Inner output pushed into the housing" src="build-guide/step-09.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Fit 6x12x5 bearings into both sides of the planet gears.</p>
+          <div class="media-gallery">
+            <img alt="Planet gear bearings" src="build-guide/step-10.jpg" loading="lazy" decoding="async" />
+            <img alt="Bearings fitted in a planet gear" src="build-guide/step-11.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Insert the planet gears into the housing. It should not require much force, just wiggle them around so they go in.</p>
+          <figure class="media-below"><img alt="Planet gears in the housing" src="build-guide/step-12.jpg" loading="lazy" decoding="async" /></figure>
+          <p>Make sure the gears spin smoothly before going forward.</p>
+
+          <p>Liberally grease with silicone grease the gears and press in the outer 45x55x7 bearing.</p>
+          <figure class="media-below"><img alt="Outer bearing pressed in" src="build-guide/step-13.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>With the outer output, insert a 6x12x5 bearing and add the heat set inserts to the holes that do not go all the way through.</p>
+          <div class="media-gallery">
+            <img alt="Outer output with bearing" src="build-guide/step-14.jpg" loading="lazy" decoding="async" />
+            <img alt="Heat set inserts in the outer output" src="build-guide/step-15.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Push the outer output into the 45x55x7 bearing by lining up the holes with the dowel pins. On the other side, screw in 25mm bolts to keep the gearbox together. Don't screw in too tight as it could cause the gearbox to spin off centre. Now is also when I put in the heat set inserts for screwing in the backplate.</p>
+          <div class="media-gallery">
+            <img alt="Outer output lined up with the dowel pins" src="build-guide/step-16.jpg" loading="lazy" decoding="async" />
+            <img alt="Bolts holding the gearbox together" src="build-guide/step-17.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Now is when I added the heat set inserts on the outside, but this could have been done earlier.</p>
+          <figure class="media-below"><img alt="Heat set inserts on the outside of the housing" src="build-guide/step-18.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>Now to finish the rotor. I used 42 n52 magnets and superglue. The magnets need to be glued in alternating polarity, so make sure to test each one as you go.</p>
+          <figure class="media-below"><img alt="Magnets laid out for the rotor" src="build-guide/step-19.jpg" loading="lazy" decoding="async" /></figure>
+          <div class="media-gallery">
+            <img alt="Magnets glued into the rotor" src="build-guide/step-20.jpg" loading="lazy" decoding="async" />
+            <img alt="Rotor with alternating magnets" src="build-guide/step-21.jpg" loading="lazy" decoding="async" />
+          </div>
+
+          <p>Now press the last 45x55x7 bearing to the back of the rotor and glue on the encoder magnet. Be very careful that the encoder magnet is flat.</p>
+          <figure class="media-below"><img alt="Encoder magnet on the rotor" src="build-guide/step-22.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>Now the rotor can be inserted in the gearbox. The magnets will want to stick to the stator, but if you press hard enough and centered enough it shouldn't be too hard. The bearings will help guide the rotor into the right position.</p>
+          <figure class="media-below"><img alt="Rotor inserted into the gearbox" src="build-guide/step-23.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>Push the back plate onto the back of the rotor, the surface should be flat with the bearing. Before putting the back plate on, I added 4 heated inserts for the motor driver.</p>
+          <figure class="media-below"><img alt="Back plate on the rotor" src="build-guide/step-24.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>Finally, the motor driver can be screwed in. It came with a metal plate, which was removed, but I kept the little white plastic spacers. Make sure the wires align with the inputs on the motor driver.</p>
+          <figure class="media-below"><img alt="Motor driver mounted on the actuator" src="build-guide/step-25.jpg" loading="lazy" decoding="async" /></figure>
+
+          <p>And it's finished!</p>
+          <figure class="media-below"><img alt="Finished QDD actuator" src="build-guide/step-26.jpg" loading="lazy" decoding="async" /></figure>
+        </article>
+      </main>
+
+      <footer>
+        <a href="mailto:naysan.munje@gmail.com">naysan.munje@gmail.com</a> <a href="https://www.linkedin.com/in/naysan-munje-257455286/" target="_blank" rel="noopener">LinkedIn</a>
+      </footer>
+    </div>
+  </body>
+</html>

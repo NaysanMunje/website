@@ -190,6 +190,40 @@ p {
   background: #e6d3bb;
 }
 
+.guide-button {
+  display: inline-block;
+  margin: 0.75em 0 1.1em;
+  padding: 10px 18px;
+  background: #8b5e3c;
+  color: #f3e6d4;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.guide-button:hover,
+.guide-button:focus-visible {
+  background: #5a3824;
+}
+
+.materials {
+  width: 100%;
+  max-width: 520px;
+  border-collapse: collapse;
+  margin: 0.4em 0 1em;
+}
+
+.materials th,
+.materials td {
+  padding: 6px 10px;
+  border: 1px solid #8b5e3c;
+  text-align: left;
+}
+
+.materials th {
+  background: #e6d3bb;
+  font-weight: normal;
+}
+
 @media (max-width: 800px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
