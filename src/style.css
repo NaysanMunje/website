@@ -209,6 +209,7 @@ p {
   background: #5a3824;
   color: #f3e6d4;
   text-decoration: none;
+  border: 1px solid #c4a07a;
   border-radius: 0;
 }
 
@@ -234,6 +235,51 @@ p {
 .materials th {
   background: #e6d3bb;
   font-weight: normal;
+}
+
+.materials td:last-child,
+.materials th:last-child {
+  width: 7em;
+  text-align: right;
+}
+
+.guide-intro {
+  max-width: 42em;
+}
+
+.guide-note {
+  margin: 0.2em 0 0.8em;
+  padding: 0.55em 0.8em;
+  border-left: 3px solid #8b5e3c;
+  background: #efe0cc;
+}
+
+.build-step {
+  margin: 1.8em 0 0;
+  padding-top: 1.2em;
+  border-top: 1px solid #d7c0a4;
+}
+
+.build-step h2 {
+  margin: 0 0 0.45em;
+  font-size: 1.05rem;
+}
+
+.build-step p {
+  max-width: 42em;
+}
+
+.guide .media-gallery,
+.guide .media-below {
+  max-width: 720px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.guide .media-gallery img,
+.guide .media-below img {
+  border: 1px solid #8b5e3c;
+  background: #efe0cc;
 }
 
 @media (max-width: 800px) {
