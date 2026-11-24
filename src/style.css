@@ -206,7 +206,7 @@ p {
   flex: 0 0 auto;
   display: inline-block;
   padding: 8px 16px;
-  background: #8b5e3c;
+  background: #5a3824;
   color: #f3e6d4;
   text-decoration: none;
   border-radius: 0;
@@ -214,7 +214,7 @@ p {
 
 .guide-button:hover,
 .guide-button:focus-visible {
-  background: #b08968;
+  background: #8b5e3c;
 }
 
 .materials {
