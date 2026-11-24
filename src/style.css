@@ -209,8 +209,11 @@ p {
   background: #5a3824;
   color: #f3e6d4;
   text-decoration: none;
-  border: 1px solid #c4a07a;
+  border: 0;
   border-radius: 0;
+  box-shadow:
+    0 0 0 4px #f3e6d4,
+    0 0 0 7px #8b5e3c;
 }
 
 .guide-button:hover,
