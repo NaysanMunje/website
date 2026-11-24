@@ -212,8 +212,8 @@ p {
   border: 0;
   border-radius: 0;
   box-shadow:
-    0 0 0 4px #f3e6d4,
-    0 0 0 7px #8b5e3c;
+    0 0 0 2px #f3e6d4,
+    0 0 0 8px #5a3824;
 }
 
 .guide-button:hover,
